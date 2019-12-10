@@ -4,8 +4,8 @@ using namespace std;
 
 class MyInteger{
 public:
-	MyInteger(int = 0);
-	int get() const;
+	MyInteger(int = 0); //缺省构造
+	int get() const; //常成员函数
 	MyInteger addition(const MyInteger&);
 	int parseInt(const string&);
 private:
@@ -15,13 +15,13 @@ MyInteger::MyInteger(int v)
 {
 	value = v;
 }
-int MyInteger::get() const
+int MyInteger::get() const //常成员函数定义
 {
 	return value;
 }
 MyInteger MyInteger::addition(const MyInteger& myint)
 {
-	return MyInteger(this->value += myint.value);
+	return MyInteger(this->value += myint.value); //this指针用法
 }
 int MyInteger::parseInt(const string& str)
 {
@@ -59,7 +59,7 @@ int MyInteger::parseInt(const string& str)
 int main()
 {
 	MyInteger int1, int2(12); //two different objects
-	cout << int1.get() << " | " << int2.get() << endl;  //return the value of data member
+	cout << int1.get() << " | " << int2.get() << endl;  //return  the value of data member
 	cout << int1.addition(int2).get () << endl;   //test the addition function
 	
 	string s;
