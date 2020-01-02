@@ -1,2 +1,3 @@
 # c-assignment
-code from teacher
+2020.1.2
+c++考试、课设结束
